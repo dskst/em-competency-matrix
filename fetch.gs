@@ -1,4 +1,4 @@
-function myFunction() {
+function fetch_competencies() {
   const sheet = SpreadsheetApp.getActive().getSheetByName("competencies");
 
   // コンピテンシー一覧の定義を取得する
