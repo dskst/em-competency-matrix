@@ -11,6 +11,10 @@ function fetch_competencies() {
       // 各コンピテンシーをカラムに書き込む
       var columnNumber = 5
       for (var competency in competencies) {
+        // コンピテンシーのレベル以外は処理しない
+        if (!competency.match(/^L[1-6]$/)) {
+          continue;
+        }
         sheet.getRange(i, columnNumber++).setValue(competencies[competency].summary + "\n" + competencies[competency].detail);
       }
     }
